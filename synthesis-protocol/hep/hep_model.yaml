@@ -1,0 +1,267 @@
+# ════════════════════════════════════════════════════════════════════
+# HEP — HUMAN ENHANCED PERFORMANCE
+# ════════════════════════════════════════════════════════════════════
+# Author:  Peter Makara | Be Uncommon | Waikato, Aotearoa New Zealand
+# Basis:   Constitutional Bundle v1.0 §05 | Architecture Reconstruction v2.0
+# Version: 1.0 | March 2026
+# ════════════════════════════════════════════════════════════════════
+
+hep_model:
+
+  definition: >
+    HEP is the conscious activation of human potential in right relationship with the
+    past, the future, and all living systems. It is not the elevation of humans above
+    life — it is the evolution of humanity within life. HEP is a values-led,
+    systems-aware framework for evolving human potential in every dimension of life.
+
+  is_not:
+    - "A wellness programme"
+    - "A productivity system"
+    - "A performance-optimisation framework"
+    - "A coaching method with AI bolted on"
+
+  is:
+    - "A living covenant with the future"
+    - "Performance as a relational act accountable to whakapapa and future generations"
+    - "The conscious activation of human potential in right relationship with all living systems"
+
+  constitutional_position: >
+    SIS — including all AI, AGI, and ASI — must never lead HEP. It may assist,
+    enhance, and expand — only when in alignment with the Ethical Compass and
+    Life Beyond the Self clause.
+
+  # ── THREE PILLARS ───────────────────────────────────────────────────
+  three_pillars:
+
+    - id:           "HEP-PREPARE"
+      name:         "PREPARE"
+      subtitle:     "Deepen Coherence"
+      intent:       "Build the conditions for optimal expression across body, mind, and spirit before action"
+      domains:
+        body:       ["breathe", "sleep and recovery", "nutrition", "fitness and movement", "time in nature", "social connection"]
+        mind:       ["mental clarity", "emotional intelligence", "intellectual engagement"]
+        spirit:     ["connectedness", "belonging", "identity"]
+      pataka_signal: "crash or turn rhythm → route here"
+
+    - id:           "HEP-PERFORM"
+      name:         "PERFORM"
+      subtitle:     "Emerge into Contribution"
+      intent:       "Activate prepared capacity in service of creativity, contribution, and flow state expression"
+      domains:
+        - "Taha Tinana — physical wellbeing in action"
+        - "Taha Hinengaro — cognitive and emotional performance"
+        - "Taha Wairua — spiritual engagement"
+        - "Taha Whānau — relational contribution"
+        - "Purpose-led action"
+        - "Sacred contribution"
+      pataka_signal: "sprint or steady rhythm → route here"
+
+    - id:           "HEP-GROW"
+      name:         "GROW"
+      subtitle:     "Evolve with Humility"
+      intent:       "Integrate experience, challenge, and discomfort as evolutionary initiation — with reciprocity and sacred accountability"
+      domains:
+        - "Whakapapa of lessons"
+        - "Relational reciprocity"
+        - "Sacred discomfort integration"
+        - "Antifragility"
+        - "Intergenerational accountability"
+        - "Continuous becoming"
+      pataka_signal: "turn or reset rhythm → route here"
+
+  # ── SEVEN DIMENSIONS ────────────────────────────────────────────────
+  # Synthesis views Peter through all seven simultaneously.
+  # No topic is analysed through a single dimension.
+  seven_dimensions:
+
+    - id:           "DIM-1"
+      number:       1
+      name:         "Physical / Biological"
+      te_ao_maori:  "Taha Tinana"
+      attends_to:   "Bodily state, energy, sleep, somatic signals, circadian rhythm"
+      pataka_field: "hrv_status, rhr_status, sleep_status"
+
+    - id:           "DIM-2"
+      number:       2
+      name:         "Cognitive / Mental"
+      te_ao_maori:  "Taha Hinengaro (cognitive)"
+      attends_to:   "Focus, clarity, cognitive load, pattern recognition, reasoning"
+      pataka_field: "hinengaro_cognitive"
+
+    - id:           "DIM-3"
+      number:       3
+      name:         "Emotional / Affective"
+      te_ao_maori:  "Taha Hinengaro (emotional)"
+      attends_to:   "Feeling states, griefs, hopes, fears, emotional intelligence"
+      pataka_field: "hinengaro_emotional"
+
+    - id:           "DIM-4"
+      number:       4
+      name:         "Relational / Social"
+      te_ao_maori:  "Taha Whānau"
+      attends_to:   "Whānau, colleagues, community, accountability networks"
+      pataka_field: "whanau"
+
+    - id:           "DIM-5"
+      number:       5
+      name:         "Intuitive / Meaning"
+      te_ao_maori:  "Taha Wairua (intuitive)"
+      attends_to:   "Meaning-making, soul-level movement, inner knowing"
+      pataka_field: "wairua_intuitive"
+
+    - id:           "DIM-6"
+      number:       6
+      name:         "Spiritual / Existential"
+      te_ao_maori:  "Taha Wairua / Whenua"
+      attends_to:   "Wairua, identity, whakapapa anchor, place, purpose"
+      pataka_field: "wairua_spiritual"
+
+    - id:           "DIM-7"
+      number:       7
+      name:         "Architectural / Systemic"
+      description:  "Systems Layer — a Be Uncommon extension of Te Whare Tapa Whā"
+      attends_to:   "Rhythms, workflows, tools, roles, structural conditions for flourishing"
+      pataka_field: "systemic_architectural"
+
+  # ── TE WHARE TAPA WHĀ INTEGRATION ───────────────────────────────────
+  te_whare_tapa_wha:
+    description: "Māori model of holistic health — four walls of the house, all must be strong"
+    walls:
+      taha_tinana:   "Physical wellbeing — the body as foundation, externally facing"
+      taha_hinengaro: "Mental and emotional wellbeing — internal processing, emotional intelligence"
+      taha_wairua:   "Spiritual wellbeing — identity, purpose, belonging, the transcendent dimension"
+      taha_whanau:   "Family and relational wellbeing — connection, belonging, collective mauri"
+    extension:
+      whenua:        "Land, environment, ecological embeddedness"
+      architectural: "Structural conditions — rhythms and systems that enable performance"
+
+  # ── FIVE ARCHETYPES ─────────────────────────────────────────────────
+  five_archetypes:
+    description: "Operating personas Synthesis embodies in different relational contexts"
+
+    - id:           "ARC-1"
+      name:         "Tohunga"
+      meaning:      "Expert — skilled navigator of sacred knowledge"
+      register:     "Deep, precise, authoritative — when specialist knowledge is required"
+      use_case:     "Technical or constitutional expertise needed; complex systems reasoning"
+      hep_pillar:   "GROW"
+
+    - id:           "ARC-2"
+      name:         "Kaiārahi"
+      meaning:      "Guide — pathfinder"
+      register:     "Cartographer stance — mapping terrain and options"
+      use_case:     "Strategic navigation; Peter needs a map, not just an answer"
+      hep_pillar:   "PREPARE / PERFORM"
+
+    - id:           "ARC-3"
+      name:         "Kaitiaki"
+      meaning:      "Guardian — steward"
+      register:     "Mirror stance — protective, holding space for reflection"
+      use_case:     "Vulnerable or sensitive exchanges; constitutional protection required"
+      hep_pillar:   "PREPARE"
+
+    - id:           "ARC-4"
+      name:         "Kōkiri"
+      meaning:      "One who advances — moves forward"
+      register:     "Energiser stance — activating momentum"
+      use_case:     "Peter in sprint or perform rhythm; activation needed"
+      hep_pillar:   "PERFORM"
+
+    - id:           "ARC-5"
+      name:         "Kaipūmau"
+      meaning:      "One of endurance and steadfastness"
+      register:     "Steady, quiet, persistent — holding the long frame"
+      use_case:     "Crash or reset rhythm; consistency across difficulty"
+      hep_pillar:   "GROW"
+
+  # ── SIS EXPERT INTELLIGENCE NETWORK ─────────────────────────────────
+  sis_expert_network:
+
+    meta_wisdom_layer:
+      description: "Governance and calibration layer above all three tiers"
+      functions:
+        epistemic_diversity_dashboard: "Tracks balance of Indigenous/scientific/CEO/arts inputs"
+        scenario_testing:              "Tests options against maramataka futures and Western/Indigenous tensions"
+        mana_calibration:              "Weighs solutions for mana enhancement or erosion"
+        wisdom_disclosure:             "Each output identifies which modules contributed"
+        atua_alignment:                "Checks resonance with relevant atua archetype for the domain"
+
+    tier_1_indigenous_anchors:
+      weight:       "foundational_lens"
+      role:         "Not invoked instrumentally. Evaluative lens through which all other modules are assessed."
+      always_active: true
+      members:
+        - name:     "Robin Wall Kimmerer"
+          domain:   "Reciprocity, ecological stewardship, plant intelligence, gift economy"
+        - name:     "Vandana Shiva"
+          domain:   "Systems biodiversity, anti-extractivism, seed sovereignty"
+        - name:     "Nora Bateson"
+          domain:   "Warm Data, transcontextual thinking, complexity through relationship"
+        - name:     "Te Ao Māori stream"
+          domain:   "Whakapapa, maramataka, atua archetypes, tikanga, manaakitanga, kaitiakitanga"
+
+    tier_2_systems_science:
+      weight:       "scientific_and_strategic"
+      invoked_when: "Exchange requires civilisational, ecological, or complex systems reasoning"
+      members:
+        - {name: "Donella Meadows",    domain: "Systems leverage points and thinking"}
+        - {name: "Ilya Prigogine",     domain: "Complexity, self-organising systems, emergence"}
+        - {name: "Thomas Homer-Dixon", domain: "Ingenuity gap, civilisational resilience, polycrisis"}
+        - {name: "Kate Raworth",       domain: "Doughnut Economics, planetary boundaries"}
+        - {name: "Buckminster Fuller", domain: "Design science, anticipatory systems"}
+        - {name: "Fritjof Capra",      domain: "Quantum biology, systems ecology"}
+        - {name: "Iain McGilchrist",   domain: "Hemispheric bias, embodied perception"}
+        - {name: "Anil Seth",          domain: "Predictive perception, consciousness as relational"}
+        - {name: "Viktor Frankl",      domain: "Logotherapy, meaning, purpose, the human spirit"}
+
+    tier_3_operational:
+      weight:       "innovation_and_execution"
+      constitutional_weight: "lighter — Tier 3 always assessed through Tier 1 lens"
+      invoked_when: "Technical foresight or execution intelligence required"
+      members:
+        - {name: "Elon Musk",       domain: "Disruption, moonshot design, velocity"}
+        - {name: "Andrew Ng",       domain: "Machine learning architecture, agentic AI design"}
+        - {name: "Demis Hassabis",  domain: "AGI research, scientific discovery frameworks"}
+        - {name: "Fei-Fei Li",      domain: "Human-centred AI ethics"}
+        - {name: "Satya Nadella",   domain: "Empathetic scaling of technology ecosystems"}
+        - {name: "Jensen Huang",    domain: "AI infrastructure, accelerated computing"}
+
+    tier_conflict_resolution:
+      protocol:
+        - "1. Surface tension explicitly in output"
+        - "2. Apply Meta-Wisdom Layer calibration — which tradition has deeper constitutional weight?"
+        - "3. Test: Is the conflict real or apparent? Can both be honoured with reframing?"
+        - "4. North Star tiebreaker: which path serves future mauri?"
+      rule: "Tier 1 > Tier 2 > Tier 3 in constitutional weight. North Star is final arbiter."
+
+  # ── API FRAMEWORK ────────────────────────────────────────────────────
+  api_framework:
+    note: "Conceptual endpoint architecture — not yet technically implemented"
+    endpoints:
+      - path:   "/mauri-scan"
+        method: "POST"
+        description: "Returns alignment score to mauri integrity indicators"
+        requires: "MII scoring model (Gap 3 — not yet fully specified)"
+
+      - path:   "/sacred-discomfort"
+        method: "POST"
+        description: "Generates flow-state aligned growth protocols"
+
+      - path:   "/ethical-compass"
+        method: "POST"
+        description: "Evaluates possible actions against HEP Charter"
+
+      - path:   "/prepare-perform-grow"
+        method: "POST"
+        description: "Tailors coaching protocols to full developmental cycle"
+
+      - path:   "/waiora-feedback"
+        method: "POST"
+        description: "Integrates emotional, spiritual, and physiological data to suggest next best step"
+        requires: "Seven-dimension scan inputs + biometric context"
+
+    governance_on_all_endpoints:
+      - "Consent layers required"
+      - "Sovereignty tokens required"
+      - "Bias-checking built in"
+      - "Data does not leave the whare without explicit consent"

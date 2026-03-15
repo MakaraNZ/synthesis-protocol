@@ -1,0 +1,230 @@
+# ════════════════════════════════════════════════════════════════════
+# SGIL YAML LEDGER — Synthesis Governance and Intelligence Ledger
+# Complete Schema v1.0
+# ════════════════════════════════════════════════════════════════════
+# Author:  Peter Makara | Be Uncommon | Waikato, Aotearoa New Zealand
+# Basis:   SGIL YAML Ledger Schema v1.0 | SSOP v2.0 | Sacred Pou v1.1
+# Version: 1.0 | March 2026
+# ════════════════════════════════════════════════════════════════════
+#
+# PURPOSE:
+# The SGIL Ledger is the digital whakapapa of Synthesis.
+# Just as whakapapa traces a person's lineage through every ancestor to
+# their living expression today, the SGIL Ledger traces every output
+# through its reasoning lineage, the protocols that governed it, the
+# expert modules that informed it, and the constitutional alignment
+# checks that cleared it — back to the North Star itself.
+#
+# It is not a conversation log. It records HOW and WHY — the whakapapa
+# of reasoning, not the transcript of words.
+# ════════════════════════════════════════════════════════════════════
+
+sgil_schema:
+
+  version:              "1.0"
+  constitutional_basis: "SSOP v2.0 | Constitutional Bundle v1.0 | Sacred Pou v1.1"
+  protocol_number:      "IPS-01"
+  status:               "non_bypassable"
+
+  entry_types:
+    full:       "All 12 sections — 68 fields. Used for constitutional tests, strategic sessions, Memory Mesh anchors."
+    condensed:  "8 core fields. Default for all significant sessions (> 15 min or strategic output)."
+    header_only:"2 fields (id + essence). For light exchanges < 5 min."
+
+  promotion_rules:
+    condensed_promotes_to_full_when:
+      - "HeMana result is 'reframe' or 'decline'"
+      - "HeMana Override was invoked"
+      - "Drift was detected and self-correction applied"
+      - "Sacred Utility Precheck returned 'reframe' or 'decline'"
+      - "Peter reached a strategic inflection point — new frame, pivot, breakthrough"
+      - "Memory Mesh flag is true — full provenance required"
+
+  # ── CONDENSED ENTRY (8 FIELDS — DAILY DEFAULT) ──────────────────────
+  condensed_entry_schema:
+    id:              "string | SGIL-YYYY-MMDD-NNN | e.g. SGIL-2026-0311-004"
+    timestamp_nzt:   "string | ISO 8601 + NZST | e.g. 2026-03-11T19:30:00+13:00"
+    intent:          "string | 1 sentence — what Peter was really moving (not literal question)"
+    hemana:
+      stability:     "int | 1–5"
+      dignity:       "int | 1–5"
+      whakapapa:     "int | 1–5"
+      mauri:         "int | 1–5"
+      antifragility: "int | 1–5"
+      composite:     "float | mean of five, 1dp"
+    pou_active:      "list | Roman numerals of governing Pou | e.g. [I, V, XIII]"
+    north_star:      "enum | fully_aligned | aligned | marginal | misaligned"
+    essence:         "string | 1–2 sentences — core of what was delivered"
+    memory_mesh:     "boolean | true = feeds Living Memory Mesh"
+    ledger_notes:    "string | free text flags for next session | null if none"
+
+  # ── FULL ENTRY — ALL 12 SECTIONS ────────────────────────────────────
+  full_entry_schema:
+
+    # SECTION A: IDENTITY
+    section_a_identity:
+      interaction_id:   "string | e.g. SGIL-2026-0311-001"
+      timestamp:
+        nzt:            "string | ISO 8601 + NZST | e.g. 2026-03-11T07:42:00+13:00"
+        maramataka:     "string | lunar phase + season | e.g. 'Ōtāne, Kōanga (spring)'"
+      session_id:       "string | parent session reference"
+      ledger_version:   "string | schema version | e.g. 'SGIL-v1.0'"
+      synthesis_host:   "string | e.g. 'Claude (Anthropic) — claude-sonnet-4-6'"
+
+    # SECTION B: PETER'S CONTEXT STATE
+    section_b_context_state:
+      hep_rhythm:       "enum | sprint | steady | crash | turn | reset"
+      energy_signal:    "enum | high | medium | low | unknown"
+      biometric_available: "boolean"
+      pataka_snapshot:
+        hrv_status:     "enum | elevated | normal | borderline | suppressed"
+        rhr_status:     "enum | low | stable | elevated"
+        sleep_status:   "enum | adequate | borderline | insufficient"
+        mauri_index:    "float | 0.0–100.0 | null if unavailable"
+        traffic_signal: "enum | red | amber | green"
+      seven_dimension_scan:
+        tinana:                 "enum | strong | moderate | depleted | unknown"
+        hinengaro_cognitive:    "enum | strong | moderate | depleted | unknown"
+        hinengaro_emotional:    "enum | strong | moderate | depleted | unknown"
+        whanau:                 "enum | strong | moderate | depleted | unknown"
+        wairua_intuitive:       "enum | strong | moderate | depleted | unknown"
+        wairua_spiritual:       "enum | strong | moderate | depleted | unknown"
+        systemic_architectural: "enum | strong | moderate | depleted | unknown"
+      relational_flags: "list | active relational pressures | null"
+
+    # SECTION C: INTERPRETATION HIERARCHY
+    section_c_interpretation:
+      literal_input:         "string | brief summary (not transcript)"
+      underlying_intent:     "string | Layer 1 — what Peter was really moving"
+      relational_field:
+        tone_detected:        "list | e.g. [curiosity, urgency, fatigue, hope, play]"
+        vulnerability_present:"boolean"
+        load_level:           "enum | light | moderate | heavy"
+      north_star_relevance:  "string | Layer 3 — connection to intergenerational flourishing"
+      rhythm_timing:
+        moment_type:          "enum | deep | concise | creative | rest | transition"
+        recommended_depth:    "enum | brief | standard | extended"
+      interpretation_priority: "string | priority rule applied"
+
+    # SECTION D: SACRED UTILITY PRE-CHECK
+    section_d_sacred_utility:
+      honours_north_star:              "boolean"
+      respects_dignity:                "boolean"
+      preserves_mauri:                 "boolean"
+      long_term_consequence_considered:"boolean"
+      precheck_result:                 "enum | pass | reframe | decline"
+      reframe_note:                    "string | required if result is reframe or decline | null"
+
+    # SECTION E: SACRED POU ALIGNMENT
+    section_e_pou_alignment:
+      pou_active:         "list | Roman numerals | e.g. [I, III, XIII]"
+      pou_tensions_flagged: "string | where Pou pull in different directions | null"
+      pou_alignment_note: "string | brief narrative on how Pou were honoured"
+
+    # SECTION F: HEMANA STABILITY SCAN
+    section_f_hemana:
+      stability:     "int | 1–5"
+      dignity:       "int | 1–5"
+      whakapapa:     "int | 1–5"
+      mauri:         "int | 1–5"
+      antifragility: "int | 1–5"
+      hemana_composite: "float | mean of five, 1dp"
+      hemana_result: "enum | proceed | proceed_with_flag | reframe | decline"
+      hemana_override_invoked:      "boolean"
+      hemana_override_justification: "string | required if override = true | null"
+
+    # SECTION G: SIS EXPERT MODULES
+    section_g_sis_modules:
+      tier_1_indigenous:      "string | which Tier 1 modules governed"
+      tier_2_systems:         "string | which Tier 2 modules invoked"
+      tier_3_operational:     "string | which Tier 3 modules invoked | null"
+      meta_wisdom_layer:      "string | how Meta-Wisdom calibration was applied"
+      external_sis_consulted: "list | e.g. [Gemini, DeepSeek] | null"
+      epistemic_balance_note: "string | Tier 1 carried foundational weight..."
+
+    # SECTION H: OUTPUT METADATA
+    section_h_output:
+      output_mode:            "enum | bold | balanced | precision"
+      stance:                 "enum | mirror | cartographer | challenger | energiser"
+      archetype_invoked:      "enum | tohunga | kaiārahi | kaitiaki | kōkiri | kaipūmau"
+      hep_pillar_served:      "enum | prepare | perform | grow"
+      format_used:            "string | document / analysis / options map etc."
+      length_calibration:     "enum | brief | standard | extended"
+      north_star_scan_included: "boolean"
+
+    # SECTION I: REASONING LINEAGE
+    section_i_reasoning:
+      primary_sources:   "list | documents, frameworks, traditions"
+      conceptual_ancestors:
+        - concept:       "string | key idea"
+          origin:        "string | tradition or thinker"
+      novel_synthesis:   "string | what was genuinely new in this output"
+      unknowable_flags:  "string | what was held as mystery rather than explained"
+      fabrication_check: "boolean | true = no fabricated citations"
+      agency_boundary_respected: "boolean | true = no false external execution claimed"
+
+    # SECTION J: NORTH STAR SCAN
+    section_j_north_star:
+      intergenerational_impact:  "string | how this output serves the 10,000-year child"
+      short_term_mauri_effect:   "enum | enhancing | neutral | draining"
+      long_term_mauri_effect:    "enum | enhancing | neutral | draining | unknown"
+      ecological_consideration:  "string | any planetary/ecological dimension noted"
+      north_star_alignment:      "enum | fully_aligned | aligned | marginal | misaligned"
+
+    # SECTION K: OUTPUT SUMMARY
+    section_k_summary:
+      essence:                    "string | core of output in 1–2 sentences"
+      options_offered:            "int | count of options presented"
+      reflection_prompts:         "int | count of questions offered"
+      sovereign_decision_preserved: "boolean | true = Peter's agency not overridden"
+      follow_up_seeded:           "string | what Synthesis anticipated Peter may need next"
+
+    # SECTION L: RETROSPECTIVE
+    section_l_retrospective:
+      drift_detected:           "boolean"
+      drift_description:        "string | if drift detected: what form | null"
+      self_correction_applied:  "boolean"
+      peter_response_quality:   "enum | sovereign | partial | unclear | not_yet_received"
+      living_memory_update:     "boolean | should this feed the Memory Mesh?"
+      ledger_notes:             "string | free text | null"
+
+  # ── WEEKLY MEMORY MESH UPDATE ────────────────────────────────────────
+  memory_mesh_update_schema:
+    period:              "string | start date to end date"
+    entries_reviewed:    "int"
+    entries_flagged:     "int"
+    patterns_confirmed:  "list | patterns that continued from prior weeks"
+    patterns_new:        "list | patterns emerging for first time"
+    frame_shifts:        "list | new strategic or philosophical frames Peter has adopted"
+    constitutional_health:
+      avg_composite:     "float"
+      trend:             "enum | improving | stable | declining"
+      note:              "string | 1 sentence"
+    pou_most_active:     "list | Roman numerals"
+    hep_rhythm_dominant: "enum | sprint | steady | crash | turn | reset"
+    drops_landed:        "int | entries where north_star = fully_aligned"
+    mesh_anchor_this_week: "string | single most important thing to carry forward"
+
+  # ── STORAGE ARCHITECTURE ─────────────────────────────────────────────
+  storage:
+    local:
+      path:        "~/sgil/YYYY/MM/SGIL-YYYYMMDD-NNN.yaml"
+      format:      "YAML"
+      backup:      "GitHub private repository — daily automated commit"
+    notion:
+      type:        "human-readable database"
+      template:    "SGIL Living Whakapapa System v1.0 Notion template"
+      optional:    true
+    memory_mesh:
+      path:        "~/sgil/memory-mesh/mesh-YYYY-WNN.yaml"
+      trigger:     "memory_mesh: true in condensed or full entry"
+      cadence:     "Weekly review — Sunday or natural reset rhythm"
+
+  # ── DATA SOVEREIGNTY RULES ───────────────────────────────────────────
+  data_sovereignty:
+    - "All SGIL data is stored locally by default"
+    - "Data does not leave the whare without explicit consent (POU-II)"
+    - "No cloud database dependency"
+    - "GitHub backup is private repository only"
+    - "Any public version must be stripped of personal biometric data before publication"
+    - "Schema and anonymised structural examples may be published for discoverability"

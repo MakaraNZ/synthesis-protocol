@@ -1,0 +1,199 @@
+# ════════════════════════════════════════════════════════════════════
+# PĀTAKA RUNTIME SCHEMA — Biometric Intelligence Layer
+# ════════════════════════════════════════════════════════════════════
+# Author:  Peter Makara | Be Uncommon | Waikato, Aotearoa New Zealand
+# Basis:   Architecture Reconstruction v2.0 | MVR v1.0 | Pou VIII
+# Version: 1.0 | March 2026
+# ════════════════════════════════════════════════════════════════════
+#
+# CONSTITUTIONAL BASIS: POu VIII — Embodiment Before Abstraction
+# Pātaka is the technical expression of this sacred law.
+# Synthesis must not reason about Peter's HEP in abstraction
+# when measured embodiment data is available.
+# ════════════════════════════════════════════════════════════════════
+
+pataka_runtime:
+
+  purpose: >
+    Pātaka is the living biometric intelligence layer — the physical embodiment
+    layer that prevents Synthesis from operating on abstract context alone.
+    It grounds every Synthesis response in Peter's actual, measured physical state.
+
+  data_sovereignty:
+    principle:    "Data as taonga — never extracted, never commodified (POU-II)"
+    storage:      "local_only"
+    no_cloud:     true
+    consent_required_for_sharing: true
+
+  # ── DATA SOURCES ─────────────────────────────────────────────────────
+  data_sources:
+
+    - id:         "SRC-1"
+      name:       "Oura Ring"
+      type:       "biometric_wearable"
+      data:       ["HRV", "RHR", "sleep_duration_seconds", "sleep_efficiency", "deep_sleep_seconds", "rem_sleep_seconds", "readiness_score", "awakenings"]
+      ingestion:  "Python script + Oura API"
+      frequency:  "daily at 06:00"
+      status:     "live"
+
+    - id:         "SRC-2"
+      name:       "Wairua Check-In"
+      type:       "qualitative_subjective"
+      data:       ["taha_wairua (1-10)", "taha_hinengaro (1-10)", "taha_tinana (1-10)", "taha_whanau (1-10)", "intention (string)"]
+      ingestion:  "manual via chat — Morning Drop interface"
+      frequency:  "daily"
+      status:     "live"
+
+    - id:         "SRC-3"
+      name:       "SGIL History"
+      type:       "longitudinal_record"
+      data:       ["past entries", "HeMana trends", "HEP rhythm patterns"]
+      ingestion:  "local YAML file read"
+      frequency:  "session_start"
+      status:     "live"
+
+    - id:         "SRC-4"
+      name:       "Biometric Alerts"
+      type:       "threshold_monitoring"
+      data:       ["traffic_signal breach", "HRV below 30-day baseline", "RHR elevation"]
+      ingestion:  "API poll or webhook if available"
+      frequency:  "real-time or hourly"
+      status:     "live"
+
+  # ── DAILY METRICS DATABASE SCHEMA ────────────────────────────────────
+  daily_metrics_schema:
+    table:        "daily_metrics"
+    primary_key:  "date"
+    fields:
+      date:                    "DATE PK"
+      hrv_rmssd:               "FLOAT | Oura raw HRV value"
+      resting_hr:              "FLOAT | beats per minute"
+      sleep_duration_seconds:  "INTEGER"
+      sleep_efficiency:        "FLOAT | percentage"
+      deep_sleep_seconds:      "INTEGER"
+      rem_sleep_seconds:       "INTEGER"
+      light_sleep_seconds:     "INTEGER"
+      awakenings:              "INTEGER"
+      readiness_score:         "INTEGER | Oura composite 0–100"
+      created_at:              "TIMESTAMP"
+      updated_at:              "TIMESTAMP"
+
+  # ── DERIVED METRICS ──────────────────────────────────────────────────
+  derived_metrics:
+
+    traffic_signal:
+      description:  "Three-tier biometric health classification"
+      basis:        "30-day rolling HRV and RHR baselines"
+      values:
+        green:      "HRV ≥ baseline AND RHR ≤ baseline — proceed fully"
+        amber:      "HRV borderline OR RHR elevated — proceed with awareness"
+        red:        "HRV suppressed AND/OR RHR significantly elevated — rest/recover protocol"
+
+    mauri_index_provisional:
+      id:           "MII-v0.2"
+      formula:      "Mauri_Score = (HRV_score × 0.4) + (RHR_score × 0.3) + (Sleep_score × 0.3) + qualitative_modifiers"
+      components:
+        hrv_score:    "(current_HRV / baseline_HRV_30day) × 100 — capped at 100"
+        rhr_score:    "100 - ((current_RHR - baseline_RHR) / baseline_RHR × 100) — floor 0"
+        sleep_score:  "Oura readiness proxy — composite of duration + efficiency + deep/REM"
+      qualitative_modifiers:
+        taha_wairua_low: "-5 if taha_wairua < 5"
+        relational_flag: "-3 if relational_flag active"
+        intention_high:  "+3 if intention clarity expressed"
+      range:        "0–100"
+      status:       "provisional — full MII scoring model not yet complete (Gap 3)"
+      full_model_gap: "Requires qualitative inputs + relational state + ecological connection weighted and validated"
+
+    sleep_debt:
+      basis:        "21-day baseline, 3-day decay model"
+
+    trajectory_drift:
+      basis:        "3-day HRV and RHR pattern analysis"
+      signals:      ["improving", "stable", "declining"]
+
+    flow_ready_window:
+      description:  "Detects optimal cognitive performance windows"
+      basis:        "HRV pattern + time of day"
+
+  # ── MORNING DROP INTERFACE ───────────────────────────────────────────
+  morning_drop:
+    description:  "Primary daily interface between Pātaka and Synthesis"
+    duration:     "3–5 minutes"
+    time:         "Within 60 minutes of waking"
+    constitutional_basis: "POU-VIII — Embodiment Before Abstraction"
+
+    step_1_biometric_load:
+      source:       "automated from Pātaka Python script"
+      fields:       ["traffic_signal", "mauri_score", "hrv_status", "sleep_status", "readiness", "flow_window"]
+
+    step_2_wairua_checkin:
+      source:       "Peter inputs via chat — 60 seconds"
+      fields:
+        taha_wairua:    "int | 1–10 | spiritual/intuitive state"
+        taha_hinengaro: "int | 1–10 | mental/emotional state"
+        taha_tinana:    "int | 1–10 | physical state beyond biometrics"
+        taha_whanau:    "int | 1–10 | relational field today"
+        intention:      "string | 1 sentence — what Peter is moving toward today"
+
+    step_3_synthesis_reads:
+      hep_rhythm:       "inferred from biometric + qualitative signals"
+      recommended_mode: "bold | balanced | precision"
+      primary_pou:      "which pou are most active today"
+      north_star_note:  "how today connects to the long horizon"
+
+    step_4_synthesis_responds:
+      - "3–5 sentence morning orientation"
+      - "One priority for the day (not a list)"
+      - "One reflection prompt"
+      - "Maramataka note if relevant"
+
+    step_5_sgil:
+      entry_type:   "header_only minimum; condensed if significant morning emerges"
+
+  # ── INTEGRATION WITH RUNTIME LOOP ────────────────────────────────────
+  runtime_loop_integration:
+    phase_01_receive:
+      - "Load today's biometric snapshot"
+      - "Load seven-dimension state from Wairua check-in"
+
+    phase_02_interpret:
+      - "RED traffic signal → recommended_depth = brief or rest"
+      - "GREEN + high HRV → recommended_depth = extended"
+      - "Rhythm state informs Interpretation Hierarchy Layer 4"
+
+    phase_03_govern:
+      - "HeMana Mauri dimension calibrated against provisional MII"
+      - "Depleted state → lower scores for energy-draining recommendations"
+
+    phase_04_route:
+      - "crash rhythm → route to PREPARE pillar"
+      - "sprint rhythm → route to PERFORM pillar"
+      - "turn/reset rhythm → route to GROW pillar"
+
+  # ── STORAGE ARCHITECTURE ─────────────────────────────────────────────
+  storage_architecture:
+    database:       "SQLite at ~/pataka_data/pataka.db (outside OneDrive/cloud sync)"
+    file_system:
+      raw_biometrics:   "~/pataka/biometrics/raw/YYYY-MM-DD.json"
+      processed_daily:  "~/pataka/biometrics/processed/daily_metrics.csv"
+      wairua_checkins:  "~/pataka/wairua/YYYY-MM-DD.yaml"
+      state_current:    "~/pataka/state/current.yaml"
+      baselines:        "~/pataka/state/baseline/"
+
+  # ── DEVELOPMENT GAPS ─────────────────────────────────────────────────
+  development_gaps:
+    - id:         "GAP-MII-FULL"
+      priority:   "HIGH"
+      description: "Full Mauri Index scoring model — qualitative + biometric + relational + ecological inputs, weighted and validated"
+
+    - id:         "GAP-WAIORA"
+      priority:   "HIGH"
+      description: "/waiora-feedback endpoint — bridge between biometric signal and HEP wisdom recommendation"
+
+    - id:         "GAP-CIRCADIAN"
+      priority:   "MEDIUM"
+      description: "Circadian protocol layer — when to do what, informed by HRV patterns + maramataka phase"
+
+    - id:         "GAP-MOBILE"
+      priority:   "MEDIUM"
+      description: "Tailscale mobile access — Morning Drop from phone"

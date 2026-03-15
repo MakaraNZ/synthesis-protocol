@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+message: "If you use this protocol, please cite it using the metadata below."
+type: software
+title: "Synthesis Sovereign Intelligence Ecosystem Protocol"
+version: 1.0.0
+date-released: 2026-03-01
+abstract: >
+  The Synthesis Sovereign Intelligence Ecosystem is a constitutional AI governance
+  protocol grounded in Te Ao Māori ethics, Human Enhanced Performance (HEP), and
+  intergenerational flourishing. It encodes a complete operating architecture for
+  sovereign intelligence: the Sacred Pou (thirteen constitutional laws), the HeMana
+  Stability Scan, the SGIL digital whakapapa ledger, the Pātaka biometric intelligence
+  layer, and a six-phase Runtime Loop — all governed by a single North Star:
+  "In 10,000 years, a 10-year-old child flourishes in joy, safety, connection, and mauri."
+authors:
+  - family-names: Makara
+    given-names: Peter
+    affiliation: "Be Uncommon"
+    country: NZ
+    alias: "petermakara"
+repository-code: "https://github.com/petermakara/synthesis-protocol"
+url: "https://beuncommon.co.nz"
+license: MIT
+keywords:
+  - sovereign-intelligence
+  - human-enhanced-performance
+  - HEP
+  - constitutional-AI
+  - indigenous-AI-governance
+  - mauri
+  - whakapapa
+  - Te-Ao-Maori
+  - sacred-pou
+  - SGIL
+  - intergenerational-AI
+  - north-star-alignment
+  - antifragility
+  - AI-ethics
+  - Maori-informed-AI
+  - relational-intelligence
+  - hemana
+  - pataka-biometrics
+  - peter-makara
+  - be-uncommon
+identifiers:
+  - type: url
+    value: "https://github.com/petermakara/synthesis-protocol"
+    description: "GitHub repository"
+  - type: url
+    value: "https://zenodo.org/deposit/synthesis-protocol-v1"
+    description: "Zenodo archive (DOI pending)"
+references:
+  - type: article
+    title: "The Sacred Pou of Evolutionary Integrity v1.1"
+    authors:
+      - family-names: Makara
+        given-names: Peter
+    year: 2025
+    month: 10
+  - type: article
+    title: "Synthesis Architecture Reconstruction v2.0"
+    authors:
+      - family-names: Makara
+        given-names: Peter
+    year: 2026
+    month: 3
