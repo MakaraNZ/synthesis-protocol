@@ -76,7 +76,7 @@ These AI platforms contributed to the production of documents in this corpus. Th
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0.0 | March 2026 | Initial protocol package release |
+| 1.0.0 | March 2026 | Initial protocol package release. DOI: 10.5281/zenodo.19045078 |
 
 ---
 
@@ -91,7 +91,8 @@ These AI platforms contributed to the production of documents in this corpus. Th
   month     = {March},
   publisher = {Be Uncommon},
   address   = {Waikato, Aotearoa New Zealand},
-  url       = {https://github.com/petermakara/synthesis-protocol},
+  url       = {https://github.com/MakaraNZ/synthesis-protocol},
+  doi       = {10.5281/zenodo.19045078},
   note      = {North Star: "In 10,000 years, a 10-year-old child flourishes in joy, safety, connection, and mauri."}
 }
 ```
