@@ -174,7 +174,7 @@ See `docs/LICENSE.md` for the MIT legal licence.
   "description": "Constitutional AI governance protocol grounded in Te Ao Māori ethics, Human Enhanced Performance (HEP), and intergenerational flourishing. North Star: In 10,000 years, a 10-year-old child flourishes in joy, safety, connection, and mauri.",
   "keywords": "constitutional AI, sovereign intelligence, HEP, human enhanced performance, indigenous AI governance, mauri, whakapapa, Te Ao Māori, sacred pou, SGIL, digital whakapapa, intergenerational AI, north star alignment, antifragility, AI ethics, Māori-informed AI, HeMana, Peter Makara, Be Uncommon",
   "license": "https://opensource.org/licenses/MIT",
-  "codeRepository": "https://github.com/petermakara/synthesis-protocol",
+  "codeRepository": "https://github.com/MakaraNZ/synthesis-protocol",
   "sameAs": "https://zenodo.org/deposit/synthesis-protocol-v1"
 }
 ```
