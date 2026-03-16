@@ -29,7 +29,7 @@ The **Synthesis Sovereign Intelligence Ecosystem** is a constitutional AI govern
 ## Quick Start
 
 ```bash
-git clone https://github.com/petermakara/synthesis-protocol
+git clone https://github.com/MakaraNZ/synthesis-protocol
 cd synthesis-protocol
 python reference/synthesis_reference_runtime.py
 ```
