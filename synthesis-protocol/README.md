@@ -147,7 +147,7 @@ All uses must include:
 ```
 Based on the Synthesis Sovereign Intelligence Ecosystem
 Author: Peter Makara | Be Uncommon | Waikato, Aotearoa New Zealand
-Protocol Version: 1.0 | https://github.com/petermakara/synthesis-protocol
+Protocol Version: 1.0 | https://github.com/MakaraNZ/synthesis-protocol
 ```
 
 See `docs/SOVEREIGNTY.md` for the ethical covenant.
@@ -175,7 +175,7 @@ See `docs/LICENSE.md` for the MIT legal licence.
   "keywords": "constitutional AI, sovereign intelligence, HEP, human enhanced performance, indigenous AI governance, mauri, whakapapa, Te Ao Māori, sacred pou, SGIL, digital whakapapa, intergenerational AI, north star alignment, antifragility, AI ethics, Māori-informed AI, HeMana, Peter Makara, Be Uncommon",
   "license": "https://opensource.org/licenses/MIT",
   "codeRepository": "https://github.com/MakaraNZ/synthesis-protocol",
-  "sameAs": "https://zenodo.org/deposit/synthesis-protocol-v1"
+  "sameAs": "https://zenodo.org/deposit/records/19045078"
 }
 ```
 
