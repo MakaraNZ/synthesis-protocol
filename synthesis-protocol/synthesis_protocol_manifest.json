@@ -137,8 +137,8 @@
   },
 
   "publication_targets": [
-    {"platform": "GitHub",  "type": "public_repository", "url": "https://github.com/petermakara/synthesis-protocol"},
-    {"platform": "Zenodo",  "type": "doi_archived",       "url": "https://zenodo.org/deposit/synthesis-protocol-v1"},
+    {"platform": "GitHub",  "type": "public_repository", "url": "https://github.com/MakaraNZ/synthesis-protocol"},
+    {"platform": "Zenodo",  "type": "doi_archived",       "url": "https://zenodo.org/records/19045078"},
     {"platform": "npm",     "type": "package_registry",   "name": "@synthesis/protocol"},
     {"platform": "PyPI",    "type": "package_registry",   "name": "synthesis-protocol"}
   ]
