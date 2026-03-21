@@ -18,6 +18,9 @@
 
 The complete protocol package is in the [synthesis-protocol](./synthesis-protocol/) folder.
 
-**DOI:** 10.5281/zenodo.19045078
+**Live Node:** https://synthesis-runtime.onrender.com
+**Identity:** https://synthesis-runtime.onrender.com/identity
+**Commons:** https://synthesis-runtime.onrender.com/commons
 
+**DOI:** 10.5281/zenodo.19045078
 **GitHub:** https://github.com/MakaraNZ/synthesis-protocol
