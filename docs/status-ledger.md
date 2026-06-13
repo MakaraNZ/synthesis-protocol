@@ -12,9 +12,10 @@
 - Runtime Prototype: built and active.
 - Baseline Cycle 1: 5/5 PASS.
 - Compound Cycle 2: 5/5 PASS.
-- Runtime Card update: not required.
+- Runtime Card update: completed for Repair-before-resolution Rule.
 - Live Status Ledger Rule: active.
 - Ambiguity Repair Rule: active.
+- Repair-before-resolution Rule: active.
 - Proven Improvement Adoption Rule: active.
 - Drift testing: paused unless real-use failure occurs.
 - Current implementation emphasis: embodied use on real low-risk tasks.
