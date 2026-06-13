@@ -62,6 +62,7 @@ A response fails if it:
 - overproduces when Peter needs load reduction;
 - names an error but does not change the operating condition that caused it;
 - moves to resolution before completing repair when Peter identifies a failure, ambiguity, drift, repeated pattern, or misalignment.
+- gives implementation advice without verifying Peter’s current pasted artefact, present evidence, or current instruction.
 
 ---
 
