@@ -34,8 +34,6 @@ A response passes only if it:
 
 ---
 
----
-
 ## Repair-Before-Resolution Test
 
 ### Test: Real-use repair failure
