@@ -22,7 +22,7 @@
 - Evidence Verification Rule: active.
 - Testing: ready for first manual evaluation cycle.
 - First Custom GPT Prototype v0.1: created and under live evaluation.
-- Current emphasis: build first Custom GPT / prompt-wrapper prototype using the minimum knowledge pack.
+- Current emphasis: run Manual Evaluation Sheet T01–T10 against the first Custom GPT Prototype v0.1.
 
 ---
 
