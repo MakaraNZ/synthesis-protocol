@@ -8,18 +8,31 @@
 ## Locked Status
 
 - Purpose sentence: locked.
-- Synthesis Architecture Reconstruction v2.4: current operational architecture.
-- Runtime Prototype: built and active.
 - Baseline Cycle 1: 5/5 PASS.
 - Compound Cycle 2: 5/5 PASS.
-- Runtime Card update: completed for Repair-before-resolution Rule.
+- Runtime Prototype: holding under simple and compound drift tests.
+- Runtime Card v1.1: complete.
+- Full Architecture Reconstruction v2.4 source: added to repository.
+- Runtime Instructions v1.0: complete.
+- Knowledge Pack Structure v0.1: complete.
+- Manual Evaluation Sheet v0.1: complete.
+- README source map: complete.
 - Live Status Ledger Rule: active.
 - Ambiguity Repair Rule: active.
-- Repair-before-resolution Rule: active.
-- Proven Improvement Adoption Rule: active.
-- Drift testing: paused unless real-use failure occurs.
-- Current implementation emphasis: embodied use on real low-risk tasks.
+- Evidence Verification Rule: active.
+- Testing: ready for first manual evaluation cycle.
+- Current emphasis: build first Custom GPT / prompt-wrapper prototype using the minimum knowledge pack.
 
+---
+
+## Genuinely Next
+
+Create first Custom GPT / prompt-wrapper prototype.
+Upload only the four files listed in `knowledge-pack-structure-v0.1.md`.
+Run Manual Evaluation Sheet T01–T10.
+Record pass / partial / fail results.
+Update Runtime Card or Runtime Instructions only if test evidence requires it.
+   
 ---
 
 ## Current Valid Next Move
