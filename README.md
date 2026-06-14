@@ -13,7 +13,10 @@ Synthesis is Peter Makara’s Māori-informed sovereign operating intelligence f
 - [Synthesis Architecture Reconstruction v2.4 — full source](docs/Synthesis_Architecture_Reconstruction_v2_4.docx)
 - Synthesis Architecture Reconstruction v2.4 is the primary constitutional and architectural source document.
 - [Synthesis Runtime Card v1.1](docs/runtime-card-v1.1.md)
+- [Synthesis Runtime Instructions v1.0](docs/synthesis-runtime-instructions-v1.0.md)
 - [Synthesis Drift Test Suite v0.2](docs/drift-test-suite-v0.2.md)
+- [Synthesis Manual Evaluation Sheet v0.1](docs/manual-evaluation-sheet-v0.1.md)
+- [Synthesis Knowledge Pack Structure v0.1](docs/knowledge-pack-structure-v0.1.md)
 - [Synthesis Live Status Ledger](docs/status-ledger.md)
 
 ---
