@@ -29,11 +29,17 @@
 
 ## Genuinely Next
 
-Run Manual Evaluation Sheet T01–T10 against the first Custom GPT Prototype v0.1.
-Record pass / partial / fail results in `manual-evaluation-sheet-v0.1.md`.
-Identify any repeated failure pattern.
-Update Runtime Card or Runtime Instructions only if test evidence requires it.
-Do not create another prototype until T01–T10 are complete.
+Use the first Custom GPT Prototype v0.1 on real low-risk tasks.
+
+Observe whether it:
+
+- reduces cognitive load;
+- protects mauri;
+- improves decision quality;
+- preserves Peter’s agency;
+- remains aligned under pressure.
+
+Reopen testing only if there is real-use failure, a repeated pattern, a new runtime rule, an architecture change, or a new technical environment.
    
 ---
 
