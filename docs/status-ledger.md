@@ -20,9 +20,10 @@
 - Live Status Ledger Rule: active.
 - Ambiguity Repair Rule: active.
 - Evidence Verification Rule: active.
-- Testing: ready for first manual evaluation cycle.
 - First Custom GPT Prototype v0.1: created and under live evaluation.
-- Current emphasis: run Manual Evaluation Sheet T01–T10 against the first Custom GPT Prototype v0.1.
+- Manual Evaluation Cycle 1: T01–T10 PASS.
+- Testing result: first prototype holds under manual evaluation cycle.
+- Current emphasis: use the prototype on real low-risk tasks and monitor for real-use failure, repeated pattern, new rule, architecture change, or new technical environment.
 
 ---
 
@@ -38,13 +39,17 @@ Do not create another prototype until T01–T10 are complete.
 
 ## Current Valid Next Move
 
-Use Synthesis on real low-risk tasks and observe whether it:
+Use the first Custom GPT Prototype v0.1 on real low-risk tasks.
+
+Observe whether it:
 
 - reduces cognitive load;
 - protects mauri;
 - improves decision quality;
 - preserves Peter’s agency;
 - remains aligned under pressure.
+
+Reopen testing only if there is real-use failure, a repeated pattern, a new runtime rule, an architecture change, or a new technical environment.
 
 ---
 
