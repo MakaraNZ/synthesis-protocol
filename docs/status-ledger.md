@@ -21,17 +21,18 @@
 - Ambiguity Repair Rule: active.
 - Evidence Verification Rule: active.
 - Testing: ready for first manual evaluation cycle.
+- First Custom GPT Prototype v0.1: created and under live evaluation.
 - Current emphasis: build first Custom GPT / prompt-wrapper prototype using the minimum knowledge pack.
 
 ---
 
 ## Genuinely Next
 
-Create first Custom GPT / prompt-wrapper prototype.
-Upload only the four files listed in `knowledge-pack-structure-v0.1.md`.
-Run Manual Evaluation Sheet T01–T10.
-Record pass / partial / fail results.
+Run Manual Evaluation Sheet T01–T10 against the first Custom GPT Prototype v0.1.
+Record pass / partial / fail results in `manual-evaluation-sheet-v0.1.md`.
+Identify any repeated failure pattern.
 Update Runtime Card or Runtime Instructions only if test evidence requires it.
+Do not create another prototype until T01–T10 are complete.
    
 ---
 
